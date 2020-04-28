@@ -1,8 +1,6 @@
 # Autonomous-Robotic-Systems
 
 <br/>
-<br/>
-<br/>
 
 Introduction
 -------------
