@@ -1,6 +1,7 @@
 # Autonomous-Robotic-Systems
 
 Introduction
+-------------
 In this coursework a LEGO Mindstorms robot is programmed to perform four main tasks of increasing priority: find the track, follow the track, avoid obstacles, stop at the middle of the longest straight.
 In order to achieve these goals, a Subsumption Architecture has been implemented. The Subsumption Architecture is composed of the following behaviours:
 FIND: The robot goes straight on the white floor until the black track is detected.
@@ -9,6 +10,7 @@ AVOID: Whenever one of the two ultrasonic sensors detects an obstacle, the robot
 OBSERVE: Saves the coordinates of the points at which the robot passes from white to black and from black to white. This allows to map the inner edge of the track. The points are fitted with lines and the longest straight is detected. The second time around the track the robot will stop in the middle of the longest straight.
  
 Behaviours
+-------------
 FIND
 This behaviour runs whenever the robot is on white. The light values are collected using the function
 HTCS2readRawWhite(colorSensor, true, lightValue);
@@ -37,6 +39,7 @@ Arbiter
 All the tasks run in parallel, outputting at all times a right motor speed and a left motor speed. The arbiter task is the task that decides which of the motor speeds generated are used by the robot at any instant. The first behaviour to be active is the Find behaviour. Find is always active when the robot is on white, and therefore not on the track. As soon as the track is detected the Follow behaviour will become active. If the track has been detected in the last 6 seconds the Follow behaviour will stay active. The Follow behaviour has a higher priority than the Find behaviour so the latter is suppressed. If the track It lost for more than 6 seconds the robot goes back to Find. When the ultrasonic sensors detect an obstacle, both Find and Follow are suppressed. During the semicircle stage of Avoid, the behaviour will be set to inactive if the line is detected. The Follow behaviour will subsume. The Observe behaviour can suppress every other behaviour if the robot is in the proximity to the middle of the longest straight. When in this position the motor speeds will be set to 0 and the behaviour will stay active until the robot is manually stopped from running.
 
 Discussion & Conclusion
+-------------
 Throughout this coursework, we achieved Find, Follow, and Avoid behaviours that work under most conditions. The Follow behaviour is limited by the speed at which the light values are collected. The code should be made more efficient for the light values to be collected faster, which would allow the use of a bigger sliding window. This could be done for example by dividing the current tasks into smaller tasks. The Avoid behaviour, if more time with the robot was available, would have been modified to a general-purpose behaviour that could avoid obstacles of all sizes. Such behaviour could be effective if the responsiveness of the robot was increased. Low responsiveness results in errors in the turning angles. The Observe behaviour does not currently work. It was of higher priority to ensure all other behaviours could perform at their best.
 This coursework was an effective way of learning about hardware programming and how unpredictable real-world situations can be in comparison to simulations. I definitely made good progress in this area and gained new hand-on skills.
 
