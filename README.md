@@ -60,3 +60,7 @@ This coursework was an effective way of learning about hardware programming and 
 <br/>
 
 ![Robot Clip](Assets/Clip.gif) 
+
+<br/>
+
+> Pardon my French
