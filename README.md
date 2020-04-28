@@ -1,5 +1,5 @@
 :EMOJICODE:
-# Autonomous-Robotic-Systems :thumbsup:
+# Autonomous-Robotic-Systems :space_invader:
 
 Introduction
 -------------
