@@ -9,7 +9,7 @@ FOLLOW: The robot turns in the direction of the track and steers to follows the 
 AVOID: Whenever one of the two ultrasonic sensors detects an obstacle, the robot backs up, turns 90 degrees towards the centre of the track, and performs a semicircle around the object until it reaches the track.
 OBSERVE: Saves the coordinates of the points at which the robot passes from white to black and from black to white. This allows to map the inner edge of the track. The points are fitted with lines and the longest straight is detected. The second time around the track the robot will stop in the middle of the longest straight.
  
-![thoughtbot](https://thoughtbot.com/brand_assets/93:44.svg) 
+![thoughtbot](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pngkit.com%2Fview%2Fu2e6i1e6u2t4i1i1_the-university-of-nottingham-1-logo-png-transparent%2F&psig=AOvVaw1Z0Lu3iB1tOS1WrP2eOQvm&ust=1588195022134000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCMjqstWFjOkCFQAAAAAdAAAAABAJ) 
  
 Behaviours
 -------------
