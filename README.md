@@ -11,11 +11,11 @@ OBSERVE: Saves the coordinates of the points at which the robot passes from whit
 
 ![Subsumption Architecture](Assets/Architecture.jpg)
 
-Figure 1:  brooks subsumption architecture
+***Figure 1:  brooks subsumption architecture***
  
 Behaviours
 -------------
-### FIND
+#### FIND
 This behaviour runs whenever the robot is on white. The light values are collected using the function
 HTCS2readRawWhite(colorSensor, true, lightValue);
 A light value above 500 is considered to be white. While the readings are above 500, the motor speed of the right wheel and the left wheel are set to be equal so the robot goes straight until it finds the track. To filter out noise and anomalies, a sliding window of four values is averaged together. A bigger sliding window would be better at filtering out noise but would make the robot not responsive enough, as new values are averaged together with old values that are no longer relevant. Light values are collected with the light of the colour sensor turned off. It has been experimentally found to be a more robust solution.
