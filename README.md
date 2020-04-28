@@ -8,7 +8,7 @@ FIND: The robot goes straight on the white floor until the black track is detect
 FOLLOW: The robot turns in the direction of the track and steers to follows the inner edge of the track. Whenever the light sensor sees black the robot steers right to go towards the white part of the projection. whenever the light sensor sees white the robot steers left to return towards the black part of the projection.
 AVOID: Whenever one of the two ultrasonic sensors detects an obstacle, the robot backs up, turns 90 degrees towards the centre of the track, and performs a semicircle around the object until it reaches the track.
 OBSERVE: Saves the coordinates of the points at which the robot passes from white to black and from black to white. This allows to map the inner edge of the track. The points are fitted with lines and the longest straight is detected. The second time around the track the robot will stop in the middle of the longest straight.
-![Robot Clip](Assets/Clip.MOV) 
+![Robot Clip](Assets/Clip.gif) 
  
 Behaviours
 -------------
