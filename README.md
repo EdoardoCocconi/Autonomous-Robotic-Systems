@@ -1,4 +1,4 @@
-![Nottingham University](AssetsUniversity.png)
+![Nottingham University](Assets/University.png)
 
 # Autonomous-Robotic-Systems
 
