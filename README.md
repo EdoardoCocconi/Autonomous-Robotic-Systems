@@ -63,4 +63,4 @@ This coursework was an effective way of learning about hardware programming and 
 
 <br/>
 
-> Pardon my French
+> © Edoardo M. Cocconi
