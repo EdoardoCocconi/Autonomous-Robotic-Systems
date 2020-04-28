@@ -1,5 +1,4 @@
-:EMOJICODE:
-# Autonomous-Robotic-Systems :space_invader:
+# Autonomous-Robotic-Systems
 
 Introduction
 -------------
