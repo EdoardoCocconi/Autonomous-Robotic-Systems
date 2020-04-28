@@ -61,6 +61,8 @@ This coursework was an effective way of learning about hardware programming and 
 
 ![Robot Clip](Assets/Clip.gif) 
 
+***Short video of the robot***
+
 <br/>
 
 > © Edoardo M. Cocconi
