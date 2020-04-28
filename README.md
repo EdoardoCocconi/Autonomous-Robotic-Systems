@@ -40,7 +40,7 @@ Saves the coordinates of the points at which the robot passes from white to blac
 ### ARBITER
 All the tasks run in parallel, outputting at all times a right motor speed and a left motor speed. The arbiter task is the task that decides which of the motor speeds generated are used by the robot at any instant. The first behaviour to be active is the Find behaviour. Find is always active when the robot is on white, and therefore not on the track. As soon as the track is detected the Follow behaviour will become active. If the track has been detected in the last 6 seconds the Follow behaviour will stay active. The Follow behaviour has a higher priority than the Find behaviour so the latter is suppressed. If the track It lost for more than 6 seconds the robot goes back to Find. When the ultrasonic sensors detect an obstacle, both Find and Follow are suppressed. During the semicircle stage of Avoid, the behaviour will be set to inactive if the line is detected. The Follow behaviour will subsume. The Observe behaviour can suppress every other behaviour if the robot is in the proximity to the middle of the longest straight. When in this position the motor speeds will be set to 0 and the behaviour will stay active until the robot is manually stopped from running.
 
-![Subsumption Architecture](Assets/Architecture.jpg)
+![Subsumption Architecture](Assets/Architecture.png)
 
 Discussion & Conclusion
 -------------
