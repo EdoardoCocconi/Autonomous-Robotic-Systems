@@ -64,5 +64,6 @@ This coursework was an effective way of learning about hardware programming and 
 ***Short video of the robot***
 
 <br/>
+<br/>
 
 > *©  2019  Edoardo  M.  Cocconi  All  Rights  Reserved*
