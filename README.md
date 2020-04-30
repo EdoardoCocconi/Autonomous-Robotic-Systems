@@ -67,5 +67,6 @@ This coursework was an effective way of learning about hardware programming and 
 
 <br/>
 <br/>
+<br/>
 
 > *©  2019  Edoardo  M.  Cocconi  All  Rights  Reserved*
