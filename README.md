@@ -35,7 +35,10 @@ Introduction
 
 ![Subsumption Architecture](Assets/Architecture.jpg)
 
-***Figure 1:  Brooks Subsumption Architecture***
+
+<p align="center">
+  <b><i>Brooks Subsumption Architecture</i></b>
+</p>
  
  <br/>
  
