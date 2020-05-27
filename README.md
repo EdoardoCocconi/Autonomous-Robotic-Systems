@@ -5,10 +5,19 @@
 # Autonomous-Robotic-Systems
 
 <br/>
+<div align="center">
+  <img src="Assets/RobotVideo.gif" alt="Robot Clip">
+</div>
+
+<br>
+
+<p align="center">
+  <b><i>Short video of the robot</i></b>
+</p>
 
 Introduction
 -------------
-In this project a LEGO Mindstorms robot is programmed to perform four main tasks of increasing priority: find the track, follow the track, avoid obstacles, stop at the middle of the longest straight. A short video of the robot can be found at the end of this README.
+In this project a LEGO Mindstorms robot is programmed to perform four main tasks of increasing priority: find the track, follow the track, avoid obstacles, stop at the middle of the longest straight.
 In order to achieve these goals, a Subsumption Architecture has been implemented. The Subsumption Architecture is composed of the following behaviours:
 FIND: The robot goes straight on the white floor until the black track is detected.
 FOLLOW: The robot turns in the direction of the track and steers to follows the inner edge of the track. Whenever the light sensor sees black the robot steers right to go towards the white part of the projection. whenever the light sensor sees white the robot steers left to return towards the black part of the projection.
@@ -58,12 +67,6 @@ Discussion & Conclusion
 -------------
 Throughout this project, Find, Follow, and Avoid behaviours that work under most conditions have been achieved. The Follow behaviour is limited by the speed at which the light values are collected. The code should be made more efficient for the light values to be collected faster, which would allow the use of a bigger sliding window. This could be done for example by dividing the current tasks into smaller tasks. The Avoid behaviour, if more time with the robot was available, would have been modified to a general-purpose behaviour that could avoid obstacles of all sizes. Such behaviour could be effective if the responsiveness of the robot was increased. Low responsiveness results in errors in the turning angles. The Observe behaviour does not currently work. It was of higher priority to ensure all other behaviours could perform at their best.
 This coursework was an effective way of learning about hardware programming and how unpredictable real-world situations can be in comparison to simulations. I definitely made good progress in this area and gained new hand-on skills.
-
-<br/>
-
-![Robot Clip](Assets/Clip.gif) 
-
-***Short video of the robot***
 
 <br/>
 <br/>
