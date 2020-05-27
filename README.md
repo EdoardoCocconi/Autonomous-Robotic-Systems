@@ -15,6 +15,8 @@
   <b><i>Short video of the robot</i></b>
 </p>
 
+<br>
+
 Introduction
 -------------
 In this project a LEGO Mindstorms robot is programmed to perform four main tasks of increasing priority: find the track, follow the track, avoid obstacles, stop at the middle of the longest straight.
