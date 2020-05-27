@@ -24,7 +24,7 @@ Introduction
   In this project a LEGO Mindstorms robot is programmed to perform four main tasks of increasing priority: find the track, follow the track, avoid obstacles, stop at the middle of the longest straight.
   <br><br>
   In order to achieve these goals, a Subsumption Architecture has been implemented. The Subsumption Architecture is composed of the following behaviours:
-  <br>
+  <br><br>
   <ul>
   <li><b>FIND:</b> The robot goes straight on the white floor until the black track is detected.</li>
   <li><b>FOLLOW:</b> The robot turns in the direction of the track and steers to follows the inner edge of the track. Whenever the light sensor sees black the robot steers right to go towards the white part of the projection. whenever the light sensor sees white the robot steers left to return towards the black part of the projection.</li>
