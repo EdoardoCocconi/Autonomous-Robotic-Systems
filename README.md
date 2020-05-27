@@ -45,12 +45,19 @@ Introduction
 Behaviours
 -------------
 #### FIND
-This behaviour runs whenever the robot is on white. The light values are collected using the function
-HTCS2readRawWhite(colorSensor, true, lightValue);
-A light value above 500 is considered to be white. While the readings are above 500, the motor speed of the right wheel and the left wheel are set to be equal so the robot goes straight until it finds the track. To filter out noise and anomalies, a sliding window of four values is averaged together. A bigger sliding window would be better at filtering out noise but would make the robot not responsive enough, as new values are averaged together with old values that are no longer relevant. Light values are collected with the light of the colour sensor turned off. It has been experimentally found to be a more robust solution.
-Another way of distinguishing black from white is to calculate the standard deviation of the light values in a sliding window. The values are relatively steady while the robot is on black. On the other hand, the light sensor picks up much more noise while the robot is on white. Standard deviation can quantify this variance, and a value above 12 has been experimentally observed to correspond to the robot beeing on white. This method is independent of the overall light level in the room so it can be considered more robust and general-purpose.
-However, for this particular application, a simple light reading gives the best performance. This is because standard deviation is computationally expensive and therefore requires a small sliding window for the robot to be responsive enough to detect the track. However, a small sliding window causes the readings to be prone to noise and a single value greater than 12 would result in the triggering of the Follow behaviour. If the Follow behaviour is triggered it takes 6 seconds to get back to Find, and the robot will wander aimlessly through this period of time. 
-Throughout this project, simple, robust, and less computationally expensive solutions are preferred to complex solutions. 
+<div align="justify">
+  This behaviour runs whenever the robot is on white. The light values are collected using the function
+  <br>
+  HTCS2readRawWhite(colorSensor, true, lightValue);
+  <br>
+  A light value above 500 is considered to be white. While the readings are above 500, the motor speed of the right wheel and the left wheel are set to be equal so the robot goes straight until it finds the track. To filter out noise and anomalies, a sliding window of four values is averaged together. A bigger sliding window would be better at filtering out noise but would make the robot not responsive enough, as new values are averaged together with old values that are no longer relevant. Light values are collected with the light of the colour sensor turned off. It has been experimentally found to be a more robust solution.
+  <br>
+  Another way of distinguishing black from white is to calculate the standard deviation of the light values in a sliding window. The values are relatively steady while the robot is on black. On the other hand, the light sensor picks up much more noise while the robot is on white. Standard deviation can quantify this variance, and a value above 12 has been experimentally observed to correspond to the robot beeing on white. This method is independent of the overall light level in the room so it can be considered more robust and general-purpose.
+  <br>
+  However, for this particular application, a simple light reading gives the best performance. This is because standard deviation is computationally expensive and therefore requires a small sliding window for the robot to be responsive enough to detect the track. However, a small sliding window causes the readings to be prone to noise and a single value greater than 12 would result in the triggering of the Follow behaviour. If the Follow behaviour is triggered it takes 6 seconds to get back to Find, and the robot will wander aimlessly through this period of time.
+  <br>
+  Throughout this project, simple, robust, and less computationally expensive solutions are preferred to complex solutions. 
+</div>
  
 #### FOLLOW
 The Follow behaviour is set to active as soon as the track is detected. In this case, the track is detected using the standard deviation on light levels in a sliding window of size 3 as discussed above. This can be done because anomalous readings don’t have such a big impact on this behaviour and standard deviation allows for general-purpose colour detection.
