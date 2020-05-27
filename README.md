@@ -25,13 +25,14 @@ Introduction
   <br>
   In order to achieve these goals, a Subsumption Architecture has been implemented. The Subsumption Architecture is composed of the following behaviours:
   <br>
-  <b>FIND:</b> The robot goes straight on the white floor until the black track is detected.
+  <ul>
+  <li><b>FIND:</b> The robot goes straight on the white floor until the black track is detected.</li>
   <br>
-  <b>FOLLOW:</b> The robot turns in the direction of the track and steers to follows the inner edge of the track. Whenever the light sensor sees black the robot steers right to go towards the white part of the projection. whenever the light sensor sees white the robot steers left to return towards the black part of the projection.
+  <li><b>FOLLOW:</b> The robot turns in the direction of the track and steers to follows the inner edge of the track. Whenever the light sensor sees black the robot steers right to go towards the white part of the projection. whenever the light sensor sees white the robot steers left to return towards the black part of the projection.</li>
   <br>
-  <b>AVOID:</b> Whenever one of the two ultrasonic sensors detects an obstacle, the robot backs up, turns 90 degrees towards the centre of the track, and performs a semicircle around the object until it reaches the track.
+  <li><b>AVOID:</b> Whenever one of the two ultrasonic sensors detects an obstacle, the robot backs up, turns 90 degrees towards the centre of the track, and performs a semicircle around the object until it reaches the track.</li>
   <br>
-  <b>OBSERVE:</b> Saves the coordinates of the points at which the robot passes from white to black and from black to white. This allows to map the inner edge of the track. The points are fitted with lines and the longest straight is detected. The second time around the track the robot will stop in the middle of the longest straight.
+  <li><b>OBSERVE:</b> Saves the coordinates of the points at which the robot passes from white to black and from black to white. This allows to map the inner edge of the track. The points are fitted with lines and the longest straight is detected. The second time around the track the robot will stop in the middle of the longest straight.</li>
 </div>
 
 <br/>
